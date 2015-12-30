@@ -26,8 +26,7 @@ var BookSchema = new Schema({
         type: String
     },
     price: {
-        type: String,
-        default: '0',
+        type: Number,
         required: true
     },
     genre: {

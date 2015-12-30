@@ -19,15 +19,21 @@ exports.getById = function(req, res) {
         res.json(book);
     });
 };
-//exports.book = function(req, res, next, id) {
-//    req.id = id;
-//    Books.findById(id, function(err, book) {
-//        if (err) return next(err);
-//        if (!book) return next(new Error('Failed to load book ' + id));
-//        req.book = book;
-//        next();
-//    });
-//};
+
+exports.search = function(req, res) {
+    Book.find({
+        "name": new RegExp(req.params.name, "i"),
+        "price": { $lte: req.params.maxprice },
+        "genre": { $in: req.params.genre }
+    }, function(err, books) {
+        if (err) {
+            return res.status(500).end();
+        }
+
+        res.json(books);
+    });
+};
+
 
 //exports.save = function(req, res) {
 //

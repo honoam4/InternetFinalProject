@@ -19,7 +19,7 @@
         <div class="well">
             <div class="input-group">
                 <!--free search-->
-                <input type="text" class="form-control search-input" placeholder="Search your favorite book..." flex>
+                <input id="search-text" type="text" class="form-control search-input" placeholder="Search your favorite book..." flex>
                 <div class="input-group-btn" >
                     <!--Categories-->
                     <div style="display:inline;">
@@ -31,13 +31,11 @@
                             <span class="glyphicon glyphicon-th"></span>Categoies <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                        <li><input type="checkbox" value="">Fiction</li>
-                        <hr class="drop-down-hr">
-                        <li><input type="checkbox" value="">Thriller</li>
-                        <hr class="drop-down-hr">
-                        <li><input type="checkbox" value="">Suspense</li>
-                        <hr class="drop-down-hr">
-                        <li><input type="checkbox" value="">Fantasy</li>
+                        <li ng-repeat="genre in allGenres">
+                            <input id="{{genre}}" type="checkbox" checked="true">{{genre}}
+                            <hr class="drop-down-hr">
+
+                        </li>
                     </ul>
                     </div>
                     <!--Price-->
@@ -50,12 +48,13 @@
                             <span class="glyphicon glyphicon-usd"></span>Price <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu">
-                            <input type="text" class="price-input"> $ TO <input type="text" class="price-input"> <span style="margin-right: 5px">$</span>
+                            UP TO
+                            <input type="number" class="price-input" id="searchMaxPrice"> <span style="margin-right: 5px">$</span>
                         </ul>
                     </div>
                     <!--Search-->
                     <div style="display:inline;">
-                        <button type="button" class="btn btn-primary"> <span class="glyphicon glyphicon-search"></span></button>
+                        <button type="button" ng-click="search()" class="btn btn-primary"> <span class="glyphicon glyphicon-search"></span></button>
                     </div>
                 </div>
             </div>
