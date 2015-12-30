@@ -26,67 +26,19 @@
 
 </head>
 <body ng-controller="homeController">
+<img hidden id="scream" src="resources/StoreLogo.png">
     <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <!-- HEADER -->
         <div class="navbar-header">
-            <a ui-sref="home" class ="navbar-brand">
-                <p style="color: white; font-size: 40px"><strong>BOOK</strong> STORE</p>
+            <a href="#/" class ="navbar-brand" style="padding: 0px">
+                <canvas id="myCanvas">
+                    Your browser does not support the HTML5 canvas tag.</canvas>
+                <!--<p style="color: white; font-size: 40px"><strong>BOOK</strong> STORE</p>-->
             </a>
         </div>
-        <div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse" style="margin-top: 15px">
             <ul class="navbar-right top-nav nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu message-dropdown">
-                        <li class="message-preview">
-                            <a href="#">
-                                <div class="media">
-                                        <span class="pull-left">
-                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
-                                        </span>
-                                    <div class="media-body">
-                                        <h5 class="media-heading">
-                                            <strong>Admin</strong>
-                                        </h5>
-                                        <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="message-footer">
-                            <a ui-sref="chat">Read All New Messages</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-                    <ul class="dropdown-menu alert-dropdown">
-                        <li>
-                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-                        </li>
-                        <li>
-                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">View All</a>
-                        </li>
-                    </ul>
-                </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle"><i class="fa fa-user"></i> Admin <b class="caret"></b>
                     </a>

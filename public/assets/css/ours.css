@@ -22,9 +22,15 @@
     margin-left: 10px;
 }
 
-.book-video{
+.book-video-div{
     padding-top: 0px !important;
     margin-bottom: 20px;
+}
+
+.book-video{
+    margin-top: 20px;
+    width: 854px;
+    height: 480px;
 }
 
 .our-footer {
@@ -49,4 +55,8 @@
 .navbar .container{
     height: 80px;
     vertical-align: middle;
+}
+
+.navbar-inverse{
+    background-color: black !important;
 }
