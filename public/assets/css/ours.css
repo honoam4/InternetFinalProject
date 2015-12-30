@@ -62,3 +62,27 @@
 .navbar-inverse{
     background-color: black !important;
 }
+
+.quote-text{
+    font-family: Old English Text MT;
+    margin: 0px
+}
+
+.dropdown-menu > li > input{
+    margin:5px
+}
+
+.drop-down-hr{
+    margin-bottom: 7px;
+    margin-top: 7px
+}
+
+.search-input
+{
+    max-width: 900px !important;
+}
+
+.price-input{
+    width: 50px;
+    margin-left: 5px;
+}

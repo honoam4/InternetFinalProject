@@ -1,15 +1,64 @@
 <div class=" text-center">
     <div class="col-md-2">
     </div>
+
+    <!--Content-->
     <div class="col-md-8" style="margin-bottom: 70px">
+        <!--quote-->
         <div class="well">
-            <h1 style="font-family: Old English Text MT; margin: 0px">“A room without books is like a body without a soul.” </h1>
+            <h1 class="quote-text">“A room without books is like a body without a soul.” </h1>
         </div>
+        <!--video-->
         <div class="well book-video-div">
             <video class="book-video" controls autoplay>
                 <source src="./../resources/The Joy of Books.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
+        </div>
+        <!--search-->
+        <div class="well">
+            <div class="input-group">
+                <!--free search-->
+                <input type="text" class="form-control search-input" placeholder="Search your favorite book..." flex>
+                <div class="input-group-btn" >
+                    <!--Categories-->
+                    <div style="display:inline;">
+                        <button type="button"
+                                class="btn btn-default dropdown-toggle"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                            <span class="glyphicon glyphicon-th"></span>Categoies <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                        <li><input type="checkbox" value="">Fiction</li>
+                        <hr class="drop-down-hr">
+                        <li><input type="checkbox" value="">Thriller</li>
+                        <hr class="drop-down-hr">
+                        <li><input type="checkbox" value="">Suspense</li>
+                        <hr class="drop-down-hr">
+                        <li><input type="checkbox" value="">Fantasy</li>
+                    </ul>
+                    </div>
+                    <!--Price-->
+                    <div style="display:inline;">
+                        <button type="button"
+                                class="btn btn-default dropdown-toggle"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false">
+                            <span class="glyphicon glyphicon-usd"></span>Price <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <input type="text" class="price-input"> $ TO <input type="text" class="price-input"> <span style="margin-right: 5px">$</span>
+                        </ul>
+                    </div>
+                    <!--Search-->
+                    <div style="display:inline;">
+                        <button type="button" class="btn btn-primary"> <span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--allBooks-->
         <div class="row">
