@@ -1,0 +1,16 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "consolidate": "^0.13.1",
+    "express": "^4.13.3",
+    "jquery": "^2.1.4",
+    "mongojs": "^2.2.2",
+    "mongoose": "^4.3.3",
+    "swig": "^1.4.2"
+  }
+}

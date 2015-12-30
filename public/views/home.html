@@ -1,0 +1,37 @@
+<div class=" text-center">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8" style="margin-bottom: 70px">
+        <div class="well book-video">
+            <video width="854" height="480" controls autoplay>
+                <source src="./../resources/The Joy of Books.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!--allBooks-->
+        <div class="row">
+            <!--single book-->
+            <div class="col-sm-3 col-lg-3 col-md-3" ng-repeat="book in allBooks">
+                <div class="thumbnail book-card">
+                    <img src="./../resources/{{book.picture}}" alt="">
+                    <div class="caption book-card-description">
+                        <h4 class="pull-right">{{book.price}}$</h4>
+                        <h4 class="book-card-title"><a href="#/book/{{book._id}}">{{book.name}}</a></h4>
+                        <h4>{{book.genre}}</h4>
+                    </div>
+
+                    <div class="ratings">
+                        <label class="pull-right book-card-reviews">{{book.reviews.length}} reviews</label>
+                        <p class="pull-left book-card-rating">
+                            <span class="glyphicon glyphicon-star" ng-repeat="i in getRating(book.rating) track by $index"></span>
+                            <span class="glyphicon glyphicon-star-empty" ng-repeat="i in getRating(5 - book.rating) track by $index"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-2">
+    </div>
+</div>

@@ -1,0 +1,2 @@
+use booksStore
+db.books.find().pretty()

@@ -1,0 +1,43 @@
+<div class="col-md-2">
+</div>
+<div class="col-md-8">
+    <div class="thumbnail">
+        <img class="img-responsive" src="./../resources/{{book.bigPic}}" alt="">
+        <div class="caption-full">
+            <h4 class="pull-right">{{book.price}}$</h4>
+            <h4 style="color: #449d44">{{book.name}}</h4>
+        </div>
+        <p>{{book.synopsis}}</p>
+        <div class="ratings">
+            <p class="pull-right">{{book.reviews.length}} reviews</p>
+            <p>
+                <span class="glyphicon glyphicon-star" ng-repeat="i in getRating(book.rating) track by $index"></span>
+                <span class="glyphicon glyphicon-star-empty" ng-repeat="i in getRating(5 - book.rating) track by $index"></span>
+                {{book.rating}} stars
+            </p>
+        </div>
+    </div>
+    <div class="well">
+        <button class="btn btn-success"><span class="glyphicon glyphicon-shopping-cart"></span> add to cart</button>
+    </div>
+    <div class="well">
+        <div ng-repeat="review in book.reviews">
+            <hr style="margin-bottom: 0px; margin-top: 1px">
+            <div class="row" >
+                <div class="col-md-12">
+                    <h3 style="font-family: Calibri; font-style: italic">"{{review.text}}"</h3>
+                    <p>{{review.writer}}</p>
+                    <span class="glyphicon glyphicon-star" ng-repeat="i in getRating(review.rating) track by $index"></span>
+                    <span class="glyphicon glyphicon-star-empty" ng-repeat="i in getRating(5 - review.rating) track by $index"></span>
+                    {{review.rating}} stars
+                    <span class="pull-right">{{review.date}}</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="col-md-2">
+</div>
