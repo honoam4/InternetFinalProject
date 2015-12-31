@@ -19,7 +19,10 @@
         <div class="well">
             <div class="input-group">
                 <!--free search-->
-                <input id="search-text" type="text" class="form-control search-input" placeholder="Search your favorite book..." flex>
+                <input id="search-text"
+                       type="text"
+                       class="form-control search-input"
+                       placeholder="Search your favorite book..." flex>
                 <div class="input-group-btn" >
                     <!--Categories-->
                     <div style="display:inline;">
@@ -49,7 +52,11 @@
                         </button>
                         <ul class="dropdown-menu">
                             UP TO
-                            <input type="number" class="price-input" id="searchMaxPrice"> <span style="margin-right: 5px">$</span>
+                            <input type="number"
+                                   min="1"
+                                   max="100"
+                                   class="price-input"
+                                   id="searchMaxPrice"><span style="margin-right: 5px">$</span>
                         </ul>
                     </div>
                     <!--Search-->

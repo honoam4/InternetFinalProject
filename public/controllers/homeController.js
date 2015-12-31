@@ -1,8 +1,7 @@
 angular.module('BookStoreApp').controller('homeController', ['$scope', '$http', function($scope, $http) {
 
-    angular.element(document.querySelector('#searchMaxPrice')).attr('value', '10');
+    angular.element(document.querySelector('#searchMaxPrice')).attr('value', '100');
     $scope.allGenres = ["Fiction", "Thriller", "Suspense", "Fantasy"];
-    //$scope.allGenresValus = [{"Fiction", }, "Thriller", "Suspense", "Fantasy"];
 
     var allBooks = function() {
                 $http.get('api/books/')
@@ -15,6 +14,7 @@ angular.module('BookStoreApp').controller('homeController', ['$scope', '$http', 
         };
 
     $scope.search = function() {
+
         // Check what are the selected genres
         var selectedGenres = [];
         angular.forEach($scope.allGenres, function(genre) {
@@ -26,15 +26,29 @@ angular.module('BookStoreApp').controller('homeController', ['$scope', '$http', 
         if (selectedGenres.length === 0) {
             alert('you must chose at least one genre');
         } else{
-            //var ddddddd = document.getElementById('search-text');
-            var searchName = "e";
-            $http.get('api/books/search/' + searchName + '/12/' + ['Thriller'])
-                .then(function(response) {
-                    $scope.sheker = response.data;
-                })
-                .catch(function(err) {
-                    console.error('Repos error', err);
-                });
+            var maxPrice = document.getElementById('searchMaxPrice').value;
+            if (maxPrice && isNaN(maxPrice) === false && maxPrice > 0){
+
+                // Check if enter free text search
+                var searchText = document.getElementById('search-text').value;
+                var prom;
+                if (searchText){
+                    prom = $http.get('api/books/search/' + searchText + '/' + maxPrice + '/' + selectedGenres);
+                } else {
+                    prom = $http.get('api/books/search/' + maxPrice + '/' + selectedGenres);
+                }
+
+                prom.then(function(response) {
+                        $scope.sheker = response.data;
+                    })
+                    .catch(function(err) {
+                        console.error('Response error', err);
+                    });
+
+            }else {
+                alert('You must insert a valid max price');
+            }
+
         };
     };
 

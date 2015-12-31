@@ -21,10 +21,18 @@ exports.getById = function(req, res) {
 };
 
 exports.search = function(req, res) {
+    // Search Text
+    var searchText = '';
+    if (req.params.name){searchText = req.params.name};
+
+    // Genres
+    var genres = req.params.genre.split(',');
+    genres = JSON.parse(JSON.stringify(genres));
+
     Book.find({
-        "name": new RegExp(req.params.name, "i"),
+        "name": new RegExp(searchText, "i"),
         "price": { $lte: req.params.maxprice },
-        "genre": { $in: req.params.genre }
+        "genre": { $in: genres }
     }, function(err, books) {
         if (err) {
             return res.status(500).end();
