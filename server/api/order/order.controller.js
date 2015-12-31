@@ -21,9 +21,10 @@ exports.getById = function(req, res) {
 };
 
 exports.save = function (req,res) {
-    var order = new Orders({
+    var order = new Order({
         bookId: req.body.bookId,
-        customerId : 1
+        customerId : 1,
+        date: new Date()
     });
 
     order.save(function(err, order) {

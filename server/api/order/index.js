@@ -1,10 +1,10 @@
 var express = require('express');
-var controller = require('./order.controller');
-
 var router = express.Router();
+
+var controller = require('./order.controller');
 
 router.get('/', controller.index);
 router.get('/getById/:id', controller.getById);
-router.put('/order/:bookId', controller.save);
+router.post('/addOrder/', controller.save);
 
 module.exports = router;
