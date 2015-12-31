@@ -2,6 +2,12 @@ angular.module('BookStoreApp').controller('homeController', ['$scope', '$http', 
 
     angular.element(document.querySelector('#searchMaxPrice')).attr('value', '100');
     $scope.allGenres = ["Fiction", "Thriller", "Suspense", "Fantasy"];
+    $scope.searchErrorMessage = "";
+
+    $('.alert .close').on('click', function(e) {
+        $(this).parent().hide();
+    });
+
 
     var allBooks = function() {
                 $http.get('api/books/')
@@ -14,7 +20,6 @@ angular.module('BookStoreApp').controller('homeController', ['$scope', '$http', 
         };
 
     $scope.search = function() {
-
         // Check what are the selected genres
         var selectedGenres = [];
         angular.forEach($scope.allGenres, function(genre) {
@@ -24,7 +29,8 @@ angular.module('BookStoreApp').controller('homeController', ['$scope', '$http', 
         });
 
         if (selectedGenres.length === 0) {
-            alert('you must chose at least one genre');
+            $scope.searchErrorMessage = 'you must chose at least one category';
+            $('#login-error').show();
         } else{
             var maxPrice = document.getElementById('searchMaxPrice').value;
             if (maxPrice && isNaN(maxPrice) === false && maxPrice > 0){
@@ -39,14 +45,15 @@ angular.module('BookStoreApp').controller('homeController', ['$scope', '$http', 
                 }
 
                 prom.then(function(response) {
-                        $scope.sheker = response.data;
+                        $scope.allBooks = response.data;
                     })
                     .catch(function(err) {
                         console.error('Response error', err);
                     });
 
             }else {
-                alert('You must insert a valid max price');
+                $scope.searchErrorMessage = 'You must insert a valid max price';
+                $('#login-error').show();
             }
 
         };
