@@ -13,6 +13,7 @@ angular.module('BookStoreApp').controller('bookController', ['$scope', '$http', 
                 $('#success-buying-message').show();
             })
             .catch(function(err){
+                $('#error-buying-message').show();
                 console.error('Error saving', err);
             });
     };
