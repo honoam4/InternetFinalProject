@@ -1,12 +1,16 @@
 angular.module('BookStoreApp').controller('bookController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
 
+    $('.alert .close').on('click', function(e) {
+        $(this).parent().hide();
+    });
+
     $scope.buyBook = function(bookId){
         var book = {
           "bookId" : bookId
         };
         $http.post('api/orders/addOrder/', book)
             .then(function(){
-                console.log('Success')
+                $('#success-buying-message').show();
             })
             .catch(function(err){
                 console.error('Error saving', err);

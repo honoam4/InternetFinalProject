@@ -6,11 +6,11 @@ var http = require('http');
 var path = require('path');
 var consolidate = require('consolidate');
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
 
 mongoose.connect('mongodb://localhost:27017/booksStore');
 // Init the models
 var app = express();
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'public/views'));
@@ -22,6 +22,8 @@ app.engine('html', consolidate['swig']);
 app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'bower_components')));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended : false }));
 
 // Init the Routes
 require('./routes')(app);
