@@ -3,6 +3,11 @@
     background-color: #f5f5f5;
 }
 
+.store-card{
+    height: 360px;
+    background-color: #f5f5f5;
+}
+
 .book-card-description{
     text-align: left;
 }
@@ -85,4 +90,15 @@
 .price-input{
     width: 50px;
     margin-left: 5px;
+}
+
+#map {
+    width: 97%;
+    height: 400px;
+    margin-right: 40px;
+    margin-left: 15px
+}
+
+.store-title{
+    text-align: center;
 }

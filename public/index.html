@@ -23,6 +23,9 @@
     <script src="app.js"></script>
     <script src="controllers/homeController.js"></script>
     <script src="controllers/bookController.js"></script>
+    <script src="controllers/contactUsController.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
 
 </head>
 <body ng-controller="homeController">
@@ -39,9 +42,9 @@
         </div>
         <div class="navbar-collapse collapse" style="margin-top: 15px">
             <ul class="navbar-right top-nav nav">
+                <li><a href="#/contactUs"><i class="fa fa-phone"></i> Contact Us </a></li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle"><i class="fa fa-user"></i> Admin <b class="caret"></b>
-                    </a>
+                    <a class="dropdown-toggle"><i class="fa fa-user"></i> Admin <b class="caret"></b></a>
                     <ul class="dropdown-menu" role="menu">
                         <li>
                             <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>

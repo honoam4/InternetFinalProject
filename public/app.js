@@ -12,6 +12,11 @@ BookStoreApp.config(function($routeProvider) {
             .when('/book/:id', {
                 templateUrl : 'views/book.html',
                 controller  : 'bookController'
+            })
+            .when('/contactUs', {
+                templateUrl : 'views/contactUs.html',
+                controller  : 'contactUsController'
             });
+
 });
 
