@@ -20,6 +20,10 @@ BookStoreApp.config(function($routeProvider) {
             .when('/manageBooks', {
                 templateUrl : 'views/manageBooks.html',
                 controller  : 'manageBooksController'
+            })
+            .when('/chat', {
+                templateUrl : 'views/chat.html',
+                controller  : 'chatController'
             });
 });
 
