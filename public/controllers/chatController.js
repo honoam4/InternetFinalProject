@@ -1,8 +1,10 @@
-angular.module('BookStoreApp').controller('chatController',['$scope', 'chatSocket', 'nickName', '$log',
-    function ($scope, chatSocket, nickName, $log) {
+angular.module('BookStoreApp').controller('chatController',['$scope', '$log',
+    function ($scope, $log) {
+
+    var nickName = 'Gal';
 
     var chatSocket = socketFactory();
-        chatSocket.forward('broadcast');
+    chatSocket.forward('broadcast');
 
     var messageFormatter = function(date, nick, message) {
         return date.toLocaleTimeString() + ' - ' +
