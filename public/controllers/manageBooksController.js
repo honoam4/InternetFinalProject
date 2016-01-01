@@ -31,7 +31,7 @@ angular.module('BookStoreApp').controller('manageBooksController', ['$scope', '$
     $scope.saveBook = function(book){
         var selectedGenres = [];
         angular.forEach($scope.allGenres, function(genre) {
-            if (document.getElementById(genre)['checked']){
+            if (document.getElementById(book._id + '-' + genre)['checked']){
                 selectedGenres.push(genre);
             }
         });
@@ -50,6 +50,37 @@ angular.module('BookStoreApp').controller('manageBooksController', ['$scope', '$
         };
 
         $http.post('api/books/updateBook/', updateBook)
+            .then(function(){
+                $('#success-save-message').show();
+            })
+            .catch(function(err){
+                $('#error-save-message').show();
+                console.error('Error saving', err);
+            });
+    };
+
+    $scope.addBook = function(){
+        var selectedGenres = [];
+        angular.forEach($scope.allGenres, function(genre) {
+            if (document.getElementById('new-' + genre)['checked']){
+                selectedGenres.push(genre);
+            }
+        });
+
+        var addBook = {
+            "id" : book._id,
+            "name" : document.getElementById(book._id + "-bookName").value,
+            "author" : document.getElementById(book._id + "-bookAuthor").value,
+            "price" : document.getElementById(book._id + "-bookPrice").value,
+            "genre" : selectedGenres,
+            "publisher" : document.getElementById(book._id + "-bookPublisher").value,
+            "publishYear" : document.getElementById(book._id + "-publishYear").value,
+            "synopsis" : document.getElementById(book._id + "-synopsis").value,
+            "rating" : book.rating,
+            "reviews" : book.reviews
+        };
+
+        $http.post('api/books/addBook/', addBook)
             .then(function(){
                 $('#success-save-message').show();
             })
