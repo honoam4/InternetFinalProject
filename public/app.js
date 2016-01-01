@@ -16,7 +16,10 @@ BookStoreApp.config(function($routeProvider) {
             .when('/contactUs', {
                 templateUrl : 'views/contactUs.html',
                 controller  : 'contactUsController'
+            })
+            .when('/manageBooks', {
+                templateUrl : 'views/manageBooks.html',
+                controller  : 'manageBooksController'
             });
-
 });
 

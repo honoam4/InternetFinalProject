@@ -18,7 +18,7 @@
 		"name" : "Harry Potter And The the Chamber of Secrets",
 		"author" : "J. K. Rowling",
 		"picture" : "Harry_Potter_and_the_Chamber_of_Secrets.png",
-		"bigPic" : "Harry_Potter_Order_of_Phoenix_large.png",
+		"bigPic" : "chamber-of-secrets-full-jacket-big.jpg",
 		"price" : 4.86,
 		"genre" : ["Fantasy"],
 		"publisher" : "Bloomsbury",
@@ -33,7 +33,7 @@
 		"name" : "Harry Potter And The Deathly Hallows",
 		"author" : "J. K. Rowling",
 		"picture" : "harry_potter_and_the_deathly_hallows.png",
-		"bigPic" : "Harry_Potter_Order_of_Phoenix_large.png",
+		"bigPic" : "harry-potter-and-the-deathly-harrows-big.jpg",
 		"price" : 8.86,
 		"genre" : ["Fantasy"],
 		"publisher" : "Bloomsbury",
@@ -46,19 +46,37 @@
 		"synopsis" : "Harry Potter and the Deathly Hallows is the seventh and final novel of the Harry Potter series, written by British author J. K. Rowling. The book was released on 21 July 2007 by Bloomsbury Publishing in the United Kingdom, in the United States by Scholastic, and in Canada by Raincoast Books, ending the series that began in 1997 with the publication of Harry Potter and the Philosopher's Stone. The novel chronicles the events directly following Harry Potter and the Half-Blood Prince (2005), and the final confrontation between the wizards Harry Potter and Lord Voldemort."
 	},
 	{
-		"name" : "Deal Breaker",
-		"author" : "Harlan Coben",
-		"picture" : "deal_breaker.png",
-		"bigPic" : "Harry_Potter_Order_of_Phoenix_large.png",
-		"price" : 5.26,
-		"genre" : ["Fiction", "Thriller", "Suspense"],
+	"name" : "Deal Breaker",
+	"author" : "Harlan Coben",
+	"picture" : "deal_breaker.png",
+	"bigPic" : "Harry_Potter_Order_of_Phoenix_large.png",
+	"price" : 5.26,
+	"genre" : ["Fiction", "Thriller", "Suspense"],
+	"publisher" : "Dell",
+	"publishYear" : 1995,
+	"rating" : 5,
+	"reviews" : [
+		{"text": "This is amazing!", "writer": "Noam the cutest", "date" : "2014-1-1", "rating" : 3},
+		{"text": "Great book :) I like it", "writer": "Gal the cutest", "date" : "2015-1-1", "rating" : 4},
+		{"text": "AMAZZZINNGGGGG!!!!!!", "writer": "Nothing", "date" : "2014-1-1", "rating" : 2}],
+	"synopsis" : "Investigator and sports agent Myron Bolitar is poised on the edge of the big-time. So is Christian Steele, a rookie quarterback and Myron's prized client. But when Christian gets a phone call from a former girlfriend, a woman whom everyone, including the police, believes is dead, the deal starts to go sour. Suddenly Myron is plunged into a baffling mystery of sex and blackmail. Trying to unravel the truth about a family's tragedy, a woman's secret and a man's lies, Myron is up against the dark side of his business—where image and talent make you rich, but the truth can get you killed."
+	},
+	{
+		"name" : "The Hunger Games",
+		"author" : "Suzanne Collins",
+		"picture" : "Hungergames_poster.jpg",
+		"bigPic" : "Hungergames_big.jpg",
+		"price" : 12.26,
+		"genre" : ["Fantasy"],
 		"publisher" : "Dell",
-		"publishYear" : 1995,
+		"publishYear" : 2008,
 		"rating" : 5,
 		"reviews" : [
 			{"text": "This is amazing!", "writer": "Noam the cutest", "date" : "2014-1-1", "rating" : 3},
 			{"text": "Great book :) I like it", "writer": "Gal the cutest", "date" : "2015-1-1", "rating" : 4},
 			{"text": "AMAZZZINNGGGGG!!!!!!", "writer": "Nothing", "date" : "2014-1-1", "rating" : 2}],
-		"synopsis" : "Investigator and sports agent Myron Bolitar is poised on the edge of the big-time. So is Christian Steele, a rookie quarterback and Myron's prized client. But when Christian gets a phone call from a former girlfriend, a woman whom everyone, including the police, believes is dead, the deal starts to go sour. Suddenly Myron is plunged into a baffling mystery of sex and blackmail. Trying to unravel the truth about a family's tragedy, a woman's secret and a man's lies, Myron is up against the dark side of his business—where image and talent make you rich, but the truth can get you killed."
+		"synopsis" : "The Hunger Games is a 2008 science fiction novel by the American writer Suzanne Collins. It is written in the voice of 16-year-old Katniss Everdeen, who lives in the dystopian, post-apocalyptic nation of Panem in North America. The Capitol, a highly advanced metropolis, exercises political control over the rest of the nation. The Hunger Games is an annual event in which one boy and one girl aged 12–18 from each of the twelve districts surrounding the Capitol are selected by lottery to compete in a televised battle to the death."
 	}
+
+
 ]

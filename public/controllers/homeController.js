@@ -30,7 +30,7 @@ angular.module('BookStoreApp').controller('homeController', ['$scope', '$http', 
 
         if (selectedGenres.length === 0) {
             $scope.searchErrorMessage = 'you must chose at least one category';
-            $('#login-error').show();
+            $('#search-error').show();
         } else{
             var maxPrice = document.getElementById('searchMaxPrice').value;
             if (maxPrice && isNaN(maxPrice) === false && maxPrice > 0){

@@ -1,0 +1,84 @@
+<div class="col-md-2">
+</div>
+<div class="col-md-8">
+    <div ng-repeat="book in allBooks">
+        <button class="btn book-edit-button" data-toggle="collapse" data-target="#book-{{book._id}}">
+            <div>
+                <h4 class="pull-left"><strong>{{book.name}}</strong> </h4>
+                <h5 class="pull-right">{{book.author}} </h5>
+            </div>
+        </button>
+        <div id="book-{{book._id}}" class="collapse">
+            <div class="row well">
+                <!--price-->
+                <!--genre-->
+                <!--publisher-->
+                <!--publishYear-->
+                <div class="col-md-6">
+                <form style="width: 100%">
+                    <!--Name-->
+                    <div class="form-group">
+                        <label for="bookName">Book Name</label>
+                        <input type="text" class="form-control edit-book-input" id="bookName" placeholder="book name..." value="{{book.name}}">
+                    </div>
+                    <!--Author-->
+                    <div class="form-group">
+                        <label for="bookAuthor">Author</label>
+                        <input type="text" class="form-control edit-book-input" id="bookAuthor" placeholder="author..." value="{{book.author}}">
+                    </div>
+                    <!--Price-->
+                    <div class="form-group">
+                        <label for="bookPrice">Price</label>
+                        <div>
+                            <input type="number" style="max-width: 386px" class="form-control pull-left" id="bookPrice" placeholder="0" value="{{book.price}}">
+                            <h4>$</h4>
+                        </div>
+                    </div>
+                </form>
+                </div>
+                <div class="col-md-6">
+                    <form style="width: 100%">
+                        <!--Category-->
+                        <div class="form-group">
+                            <label for="bookCategory">Select Categories</label>
+                            <div id="bookCategory">
+                                <button type="button"
+                                        class="btn btn-default dropdown-toggle categories-change"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                    <span class="glyphicon glyphicon-th"></span>Categoies <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li ng-repeat="genre in allGenres">
+                                        <input id="{{genre}}" type="checkbox" ng-checked="isCheckCategory(book, genre)">{{genre}}
+                                        <hr class="drop-down-hr">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--publisher-->
+                        <div class="form-group">
+                            <label for="bookPublisher">publisher</label>
+                            <input type="text" class="form-control edit-book-input" id="bookPublisher" placeholder="publisher..." value="{{book.publisher}}">
+                        </div>
+                        <!--publishYear-->
+                        <div class="form-group">
+                            <label for="publishYear">publisher</label>
+                            <input type="text" class="form-control edit-book-input" id="publishYear" placeholder="publish year..." value="{{book.publishYear}}">
+                        </div>
+                        <button style="margin: 2px" type="submit" class="btn btn-danger pull-right">
+                            <span class="glyphicon glyphicon-trash"></span>Delete
+                        </button>
+                        <button style="margin: 2px" type="button" class="btn btn-primary pull-right">
+                            <span class="glyphicon glyphicon-floppy-disk"></span> Save
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-2">
+</div>
