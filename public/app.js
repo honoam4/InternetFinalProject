@@ -1,5 +1,9 @@
 // create the module and name it scotchApp
-var BookStoreApp = angular.module('BookStoreApp', ['ngRoute', 'ngResource']);
+var BookStoreApp = angular.module('BookStoreApp',
+    ['ngRoute',
+     'ngResource',
+     'chatService',
+     'btford.socket-io']);
 
 BookStoreApp.config(function($routeProvider) {
         $routeProvider

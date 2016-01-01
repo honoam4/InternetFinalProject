@@ -1,16 +1,7 @@
-angular.module('BookStoreApp').controller('chatController',['$scope', '$log',
-    function ($scope, $log) {
+angular.module('BookStoreApp').controller('chatController',['$scope', '$log', 'chatSocket', 'messageFormatter',
+    function ($scope, $log, chatSocket, messageFormatter) {
 
-    var nickName = 'Gal';
-
-    var chatSocket = socketFactory();
-    chatSocket.forward('broadcast');
-
-    var messageFormatter = function(date, nick, message) {
-        return date.toLocaleTimeString() + ' - ' +
-            nick + ' - ' +
-            message + '\n';
-    };
+    var nickName = 'User';
 
     $scope.nickName = nickName;
     $scope.messageLog = 'Ready to chat!';
