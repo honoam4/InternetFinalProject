@@ -8,5 +8,6 @@ router.get('/getById/:id', controller.getById);
 router.get('/search/:name/:maxprice/:genre', controller.search);
 router.get('/search/:maxprice/:genre', controller.search);
 router.post('/updateBook/', controller.save);
+router.post('/addBook/', controller.save);
 
 module.exports = router;

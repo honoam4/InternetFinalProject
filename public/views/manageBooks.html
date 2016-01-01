@@ -47,7 +47,7 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li ng-repeat="genre in allGenres">
-                                        <input id="{{genre}}" type="checkbox" ng-checked="isCheckCategory(book, genre)">{{genre}}
+                                        <input id="{{book._id}}-{{genre}}" type="checkbox" ng-checked="isCheckCategory(book, genre)">{{genre}}
                                         <hr class="drop-down-hr">
                                     </li>
                                 </ul>
@@ -72,6 +72,94 @@
                         <span class="glyphicon glyphicon-trash"></span>Delete
                     </button>
                     <button ng-click="saveBook(book)" type="button" class="btn btn-success pull-right edit-book-button">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> Save
+                    </button>
+                </div>
+                <div style="margin-top: 60px">
+                    <div class="alert alert-success fade in" id="success-save-message" style="display:none;">
+                        <button type="button" class="close">×</button>
+                        <strong>Congratulations!! </strong> The book was udated seccessfuly
+                    </div>
+                    <div class="alert alert-danger fade in" id="error-save-message" style="display:none;">
+                        <button type="button" class="close">×</button>
+                        <strong>Error save the book. </strong> Please try again later.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--New Book-->
+    <div>
+        <button class="btn btn-primary book-edit-button" data-toggle="collapse" data-target="#book-new">
+            <div>
+                <h4 class="pull-left">add new book...</h4>
+                <h5 class="pull-right"></h5>
+            </div>
+        </button>
+        <div id="book-new" class="collapse">
+            <div class="row well" style="background-color: aliceblue">
+                <div class="col-md-6">
+                    <form style="width: 100%">
+                        <!--Name-->
+                        <div class="form-group">
+                            <label for="new-bookName">Book Name</label>
+                            <input type="text" class="form-control edit-book-input" id="new-bookName" placeholder="book name...">
+                        </div>
+                        <!--Author-->
+                        <div class="form-group">
+                            <label for="new-bookAuthor">Author</label>
+                            <input type="text" class="form-control edit-book-input" id="new-bookAuthor" placeholder="author..."">
+                        </div>
+                        <!--Price-->
+                        <div class="form-group">
+                            <label for="new-bookPrice">Price</label>
+                            <div>
+                                <input type="number" style="max-width: 386px" class="form-control pull-left" id="new-bookPrice" placeholder="0">
+                                <h4>$</h4>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <form style="width: 100%">
+                        <!--Category-->
+                        <div class="form-group">
+                            <label for="new-bookCategory">Select Categories</label>
+                            <div id="new-bookCategory">
+                                <button type="button"
+                                        class="btn btn-default dropdown-toggle categories-change"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                    <span class="glyphicon glyphicon-th"></span>Categoies <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li ng-repeat="genre in allGenres">
+                                        <input id="new-{{genre}}" type="checkbox" checked="true">{{genre}}
+                                        <hr class="drop-down-hr">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--publisher-->
+                        <div class="form-group">
+                            <label for="new-bookPublisher">publisher</label>
+                            <input type="text" class="form-control edit-book-input" id="new-bookPublisher" placeholder="publisher...">
+                        </div>
+                        <!--publishYear-->
+                        <div class="form-group">
+                            <label for="new-publishYear">publisher</label>
+                            <input type="text" class="form-control edit-book-input" id="new-publishYear" placeholder="publish year...">
+                        </div>
+                    </form>
+                </div>
+                <div class="form-group" style="margin-left: 15px">
+                    <label for="new-Synopsis">Synopsis</label>
+                    <textarea rows="5" type="text" class="form-control edit-book-sys" id="new-synopsis" placeholder="synopsis..."></textarea>
+                    <button type="submit" class="btn btn-danger pull-right edit-book-button">
+                        <span class="glyphicon glyphicon-trash"></span>Delete
+                    </button>
+                    <button ng-click="addBook()" type="button" class="btn btn-success pull-right edit-book-button">
                         <span class="glyphicon glyphicon-floppy-disk"></span> Save
                     </button>
                 </div>
