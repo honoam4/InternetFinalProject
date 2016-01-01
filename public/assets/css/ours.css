@@ -123,6 +123,14 @@
     max-width: 400px;
 }
 
+.edit-book-sys{
+    max-width: 988px;
+}
+
 .categories-change{
     max-width: 400px;
+}
+
+.edit-book-button{
+    margin: 15px 2px 2px 2px;
 }

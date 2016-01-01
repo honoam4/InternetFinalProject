@@ -42,6 +42,43 @@ exports.search = function(req, res) {
     });
 };
 
+exports.save = function(req, res) {
+
+    var id = req.body.id;
+
+    var book = new Book({
+        name : req.body.name,
+        author : req.body.author,
+        "price" : req.body.price,
+        picture : req.body.picture,
+        bigPic : req.body.bigPic,
+        genre : req.body.genre,
+        publisher : req.body.publisher,
+        publishYear : req.body.publishYear,
+        rating : req.body.rating,
+        reviews : req.body.reviews,
+        synopsis: req.body.synopsis,
+    });
+
+    var data = book.toObject();
+    console.log(data.name);
+
+    if (!id) {
+        id = data._id
+    }
+
+    delete data._id;
+
+    return Book.update({ _id: id }, {$set: data, $setOnInsert: { _id: id }}, {upsert: true}, function(err) {
+        if (!err) {
+            return res.send("updated");
+            $('#success-buying-message').show();
+        } else {
+            $('#error-buying-message').show();
+            console.log(err);
+        }
+    });
+};
 
 //exports.save = function(req, res) {
 //

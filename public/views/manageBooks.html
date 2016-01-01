@@ -10,27 +10,23 @@
         </button>
         <div id="book-{{book._id}}" class="collapse">
             <div class="row well">
-                <!--price-->
-                <!--genre-->
-                <!--publisher-->
-                <!--publishYear-->
                 <div class="col-md-6">
                 <form style="width: 100%">
                     <!--Name-->
                     <div class="form-group">
-                        <label for="bookName">Book Name</label>
-                        <input type="text" class="form-control edit-book-input" id="bookName" placeholder="book name..." value="{{book.name}}">
+                        <label for="{{book._id}}-bookName">Book Name</label>
+                        <input type="text" class="form-control edit-book-input" id="{{book._id}}-bookName" placeholder="book name..." value="{{book.name}}">
                     </div>
                     <!--Author-->
                     <div class="form-group">
-                        <label for="bookAuthor">Author</label>
-                        <input type="text" class="form-control edit-book-input" id="bookAuthor" placeholder="author..." value="{{book.author}}">
+                        <label for="{{book._id}}-bookAuthor">Author</label>
+                        <input type="text" class="form-control edit-book-input" id="{{book._id}}-bookAuthor" placeholder="author..." value="{{book.author}}">
                     </div>
                     <!--Price-->
                     <div class="form-group">
-                        <label for="bookPrice">Price</label>
+                        <label for="{{book._id}}-bookPrice">Price</label>
                         <div>
-                            <input type="number" style="max-width: 386px" class="form-control pull-left" id="bookPrice" placeholder="0" value="{{book.price}}">
+                            <input type="number" style="max-width: 386px" class="form-control pull-left" id="{{book._id}}-bookPrice" placeholder="0" value="{{book.price}}">
                             <h4>$</h4>
                         </div>
                     </div>
@@ -40,8 +36,8 @@
                     <form style="width: 100%">
                         <!--Category-->
                         <div class="form-group">
-                            <label for="bookCategory">Select Categories</label>
-                            <div id="bookCategory">
+                            <label for="{{book._id}}-bookCategory">Select Categories</label>
+                            <div id="{{book._id}}-bookCategory">
                                 <button type="button"
                                         class="btn btn-default dropdown-toggle categories-change"
                                         data-toggle="dropdown"
@@ -59,22 +55,35 @@
                         </div>
                         <!--publisher-->
                         <div class="form-group">
-                            <label for="bookPublisher">publisher</label>
-                            <input type="text" class="form-control edit-book-input" id="bookPublisher" placeholder="publisher..." value="{{book.publisher}}">
+                            <label for="{{book._id}}-bookPublisher">publisher</label>
+                            <input type="text" class="form-control edit-book-input" id="{{book._id}}-bookPublisher" placeholder="publisher..." value="{{book.publisher}}">
                         </div>
                         <!--publishYear-->
                         <div class="form-group">
-                            <label for="publishYear">publisher</label>
-                            <input type="text" class="form-control edit-book-input" id="publishYear" placeholder="publish year..." value="{{book.publishYear}}">
+                            <label for="{{book._id}}-publishYear">publisher</label>
+                            <input type="text" class="form-control edit-book-input" id="{{book._id}}-publishYear" placeholder="publish year..." value="{{book.publishYear}}">
                         </div>
-                        <button style="margin: 2px" type="submit" class="btn btn-danger pull-right">
-                            <span class="glyphicon glyphicon-trash"></span>Delete
-                        </button>
-                        <button style="margin: 2px" type="button" class="btn btn-primary pull-right">
-                            <span class="glyphicon glyphicon-floppy-disk"></span> Save
-                        </button>
-
                     </form>
+                </div>
+                <div class="form-group" style="margin-left: 15px">
+                    <label for="{{book._id}}-Synopsis">Synopsis</label>
+                    <textarea rows="5" type="text" class="form-control edit-book-sys" id="{{book._id}}-synopsis" placeholder="synopsis...">{{book.synopsis}}</textarea>
+                    <button type="submit" class="btn btn-danger pull-right edit-book-button">
+                        <span class="glyphicon glyphicon-trash"></span>Delete
+                    </button>
+                    <button ng-click="saveBook(book)" type="button" class="btn btn-success pull-right edit-book-button">
+                        <span class="glyphicon glyphicon-floppy-disk"></span> Save
+                    </button>
+                </div>
+                <div style="margin-top: 60px">
+                    <div class="alert alert-success fade in" id="success-save-message" style="display:none;">
+                        <button type="button" class="close">×</button>
+                        <strong>Congratulations!! </strong> The book was udated seccessfuly
+                    </div>
+                    <div class="alert alert-danger fade in" id="error-save-message" style="display:none;">
+                        <button type="button" class="close">×</button>
+                        <strong>Error save the book. </strong> Please try again later.
+                    </div>
                 </div>
             </div>
         </div>
