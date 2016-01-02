@@ -42,6 +42,18 @@ exports.search = function(req, res) {
     });
 };
 
+exports.delete = function(req, res){
+    var id = req.body.id;
+
+    return Book.remove({ _id: id }, function(err) {
+        if (!err) {
+            return res.send("deleted");
+        } else {
+            console.log(err);
+        }
+    });
+};
+
 exports.save = function(req, res) {
 
     var id = req.body.id;
@@ -72,9 +84,7 @@ exports.save = function(req, res) {
     return Book.update({ _id: id }, {$set: data, $setOnInsert: { _id: id }}, {upsert: true}, function(err) {
         if (!err) {
             return res.send("updated");
-            $('#success-buying-message').show();
         } else {
-            $('#error-buying-message').show();
             console.log(err);
         }
     });
