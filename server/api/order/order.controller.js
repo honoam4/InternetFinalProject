@@ -37,7 +37,7 @@ exports.byMonth = function(req, res) {
     Order.collection.group(group.key, group.cond, group.initial, group.reduce, group.finalize, true, function(err, results) {
         var oderCounts = [];
         results.forEach(function (order){
-            oderCounts.push({"x": order.date.split('-')[0] + "-" + order.date.split('-')[1], "y" : order.count});
+            oderCounts.push({"x": order.date.getMonth() + 1 + "-" + order.date.getFullYear(), "y" : order.count});
         });
 
         res.json(oderCounts);
