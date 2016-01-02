@@ -13,31 +13,35 @@
             </input>
             </br></br>
             <!--Search by dates-->
-            <div class="form-group">
-                <h4>Start Date: </h4><input type="date" id="minDate">
-                <h4>End Date: </h4><input type="date" id="maxDate">
+            <div class="pull-left multi-col">
+                <div>
+                    <h5>Start Date: </h5><input type="date" id="minDate">
+                </div>
+                <div>
+                    <h5>End Date: </h5><input type="date" id="maxDate">
+                </div>
+
             </div>
-            <!--Search by customer id-->
-            <div>
-                <button type="button"
-                        class="btn btn-default dropdown-toggle"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false">
-                    <span class="glyphicon glyphicon-user"></span>Customers <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li ng-repeat="customer in customers">
-                        <input id="{{customer}}" type="checkbox" checked="true">{{customer}}
-                        <hr class="drop-down-hr">
-                    </li>
-                </ul>
-            </div>
-            </br>
-            <!--Search button-->
-            <div>
-                <button type="button" ng-click="search()" class="btn btn-primary"> <span class="glyphicon glyphicon-search"> Search!</span></button>
-            </div>
+            </br></br>
+            </br></br>
+                <!--Search by customer id-->
+                <div class="pull-left" style="margin-top: 20px">
+                    <button type="button"
+                            class="btn btn-default dropdown-toggle"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                        <span class="glyphicon glyphicon-user"></span>Customers <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="customer in customers">
+                            <input id="{{customer}}" type="checkbox" checked="true">{{customer}}
+                            <hr class="drop-down-hr">
+                        </li>
+                    </ul>
+                </div>
+                <!--Search button-->
+                <button style="margin-top: 20px" type="button" ng-click="search()" class="btn btn-primary"> <span class="glyphicon glyphicon-search"></span></button>
         </div>
         <div class="alert alert-danger fade in" id="search-error" style="display:none; margin-top: 10px; margin-bottom: 0px">
             <button type="button" class="close">×</button>
