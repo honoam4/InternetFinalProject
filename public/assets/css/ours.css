@@ -134,3 +134,17 @@
 .edit-book-button{
     margin: 15px 2px 2px 2px;
 }
+
+.chat-input{
+    max-width:1500px;
+    width:1130px;
+    height:80px;
+    font-size: 18px
+}
+
+.chat-message-log{
+    max-width:1500px;
+    width:1130px;
+    height:350px;
+    font-size:16px;
+}

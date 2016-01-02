@@ -21,14 +21,16 @@ angular.module('BookStoreApp').controller('chatController',['$scope', '$log', 'c
                     $scope.messageLog;
             $scope.nickName = nickName;
         }
-
-        // Sending the message to the server
-        $log.debug('sending message', $scope.message);
-        chatSocket.emit('message', nickName, $scope.message);
-        $scope.messageLog = messageFormatter(new Date(),
-                nickName, $scope.message) +
+        else {
+            // Sending the message to the server
+            $log.debug('sending message', $scope.message);
+            chatSocket.emit('message', nickName, $scope.message);
+            $scope.messageLog = messageFormatter(new Date(),
+                    nickName, $scope.message) +
                 $scope.messageLog;
-        $log.debug('message sent', $scope.message);
+            $log.debug('message sent', $scope.message);
+        }
+
         $scope.message = '';
     }
 
