@@ -4,9 +4,10 @@ angular.module('BookStoreApp').controller('bookController', ['$scope', '$http', 
         $(this).parent().hide();
     });
 
-    $scope.buyBook = function(bookId){
+    $scope.buyBook = function(bookId, bookName){
         var book = {
-          "bookId" : bookId
+          "bookId" : bookId,
+          "bookName" : bookName
         };
         $http.post('api/orders/addOrder/', book)
             .then(function(){

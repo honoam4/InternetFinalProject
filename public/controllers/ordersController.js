@@ -1,5 +1,9 @@
 angular.module('BookStoreApp').controller('ordersController', ['$scope', '$http',
                                           function($scope, $http) {
+      $('.alert .close').on('click', function(e) {
+          $(this).parent().hide();
+      });
+
       // Get all orders
       var allOrders = function() {
           $http.get('api/orders/')
@@ -81,7 +85,7 @@ angular.module('BookStoreApp').controller('ordersController', ['$scope', '$http'
           } else{
               var minDate = document.getElementById('minDate').value;
               var maxDate = document.getElementById('maxDate').value;
-              if (minDate < maxDate){
+              if (minDate < maxDate && minDate && maxDate){
 
                   // Check if enter free text search
                   var searchText = document.getElementById('book-name-text').value;
@@ -102,7 +106,7 @@ angular.module('BookStoreApp').controller('ordersController', ['$scope', '$http'
 
               }else {
                   $scope.searchErrorMessage = 'You must insert valid dates';
-                  $('#login-error').show();
+                  $('#search-error').show();
               }
           };
       };

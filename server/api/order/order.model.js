@@ -14,6 +14,9 @@ var OrderSchema = new Schema({
         type: String,
         required: true
     },
+    bookName: {
+        type: String
+    },
     customerId: {
         type: String,
         required: true

@@ -71,6 +71,7 @@ exports.byBooks = function(req, res) {
 exports.save = function (req,res) {
     var order = new Order({
         bookId: req.body.bookId,
+        bookName: req.body.bookName,
         customerId : 1,
         date: new Date()
     });
@@ -99,6 +100,7 @@ exports.search = function(req, res) {
     var maxDate = new Date(req.params.maxDate);
 
     Order.find({
+        "bookName": new RegExp(searchText, "i"),
         "date": { $lte: maxDate, $gte: minDate },
         "customerId": { $in: chosenCustomers }
         },

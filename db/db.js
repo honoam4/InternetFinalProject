@@ -21,7 +21,7 @@ exports.initDatabase = function (){
 				for(var i = 0; i < bookNumber; i++){
 					var orderDateString = "2015-" + bookNumber + "-1";
 					var orderDate = new Date(orderDateString);
-					var order = {"bookId" : book._id, "customerId" : bookNumber.toString(), "date" : orderDate};
+					var order = {"bookId" : book._id, "bookName": book.name, "customerId" : bookNumber.toString(), "date" : orderDate};
 					ordersCollection.insert(order, {w:1}, function(err,docs) {
 						if (err) throw err;
 					});

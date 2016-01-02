@@ -53,7 +53,7 @@ angular.module('BookStoreApp').controller('homeController', ['$scope', '$http', 
 
             }else {
                 $scope.searchErrorMessage = 'You must insert a valid max price';
-                $('#login-error').show();
+                $('#search-error').show();
             }
 
         };
