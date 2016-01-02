@@ -1,5 +1,5 @@
 var myDb = require('./db/db.js');
-//myDb.initDatabase();
+myDb.initDatabase();
 
 var express = require('express');
 var http = require('http');
