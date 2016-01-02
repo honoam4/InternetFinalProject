@@ -1,7 +1,5 @@
 angular.module('BookStoreApp').controller('ordersController', ['$scope', '$http', '$routeParams',
                                           function($scope, $http, $routeParams) {
-      $scope.orders = [];
-
       // Get all orders
       var allOrders = function() {
           $http.get('api/orders/')
@@ -41,6 +39,9 @@ angular.module('BookStoreApp').controller('ordersController', ['$scope', '$http'
 
                               $scope.orders.push(orderWithName);
                           })
+
+                          // Set the customers
+                          setCustomers();
                       })
                       .catch(function(err) {
                           console.error('Error', err);
@@ -51,5 +52,60 @@ angular.module('BookStoreApp').controller('ordersController', ['$scope', '$http'
               });
       };
 
+      var setCustomers = function(){
+          $scope.customers = [];
+          $scope.orders.forEach(function(order){
+              if ($scope.customers.indexOf(order.customerId) == -1)
+              {
+                  $scope.customers.push(order.customerId);
+              }
+          });
+      };
+
+      $scope.search = function() {
+          // Check what are the selected genres
+          var selectedGenres = [];
+          angular.forEach($scope.allGenres, function(genre) {
+              if (document.getElementById(genre)['checked']){
+                  selectedGenres.push(genre);
+              }
+          });
+
+          if (selectedGenres.length === 0) {
+              $scope.searchErrorMessage = 'you must chose at least one category';
+              $('#search-error').show();
+          } else{
+              var maxPrice = document.getElementById('searchMaxPrice').value;
+              if (maxPrice && isNaN(maxPrice) === false && maxPrice > 0){
+
+                  // Check if enter free text search
+                  var searchText = document.getElementById('search-text').value;
+                  var prom;
+                  if (searchText){
+                      prom = $http.get('api/books/search/' + searchText + '/' + maxPrice + '/' + selectedGenres);
+                  } else {
+                      prom = $http.get('api/books/search/' + maxPrice + '/' + selectedGenres);
+                  }
+
+                  prom.then(function(response) {
+                          $scope.allBooks = response.data;
+                      })
+                      .catch(function(err) {
+                          console.error('Response error', err);
+                      });
+
+              }else {
+                  $scope.searchErrorMessage = 'You must insert a valid max price';
+                  $('#login-error').show();
+              }
+          };
+      };
+
+      $scope.orders = [];
+
+      // Get all the orders
       allOrders();
+
+      $scope.fromDate = '';
+      $scope.untilDate = '';
 }]);

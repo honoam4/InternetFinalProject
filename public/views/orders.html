@@ -1,20 +1,74 @@
 <div class="col-md-2">
 </div>
-<div class="container col-md-8">
-    <table class="table table-striped orders-table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Book Name</th>
-                <th>Costumer Id</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="order in orders">
-                <td>{{order.date | date : "dd/MM/yyyy" }}</td>
-                <td>{{order.bookName}}</td>
-                <td>{{order.customerId}}</td>
-            </tr>
-        </tbody>
-    </table>
+
+<div class="col-md-8">
+    <!--Search-->
+    <div class="well">
+        <div class="input-group">
+            <!--Search by book name-->
+            <input id="book-name-text"
+                   type="text"
+                   class="form-control search-input-orders"
+                   placeholder="Search orders by book..." flex>
+            </input>
+            </br></br></br>
+            <!--Search by dates-->
+            <div class="form-group">
+                <label class="control-label"><i class="fa fa-calendar"></i> <i class="fa fa-arrows-h"></i> <i class="fa fa-calendar"></i> Date range <small>(dynamic)</small></label><br>
+                <div class="form-group col-xs-6">
+                    <input type="text" class="form-control" ng-model="fromDate" data-max-date="{{untilDate}}" placeholder="From" bs-datepicker>
+                </div>
+                <div class="form-group col-xs-6">
+                    <input type="text" class="form-control" ng-model="untilDate" data-min-date="{{fromDate}}" placeholder="Until" bs-datepicker>
+                </div>
+            </div>
+            <!--Search by customer id-->
+            <div style="display: inline">
+                <button type="button"
+                        class="btn btn-default dropdown-toggle"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        style="margin-left: 14px">
+                    <span class="glyphicon glyphicon-user"></span>Customers <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li ng-repeat="customer in customers">
+                        <input id="{{customer}}" type="checkbox" checked="true">{{customer}}
+                        <hr class="drop-down-hr">
+                    </li>
+                </ul>
+            </div>
+            <!--<div class="input-group-btn">-->
+                <!--Search button-->
+                <div style="display:inline;">
+                    <button type="button" ng-click="search()" class="btn btn-primary"> <span class="glyphicon glyphicon-search"></span></button>
+                </div>
+            <!--</div>-->
+        </div>
+        <div class="alert alert-danger fade in" id="search-error" style="display:none; margin-top: 10px; margin-bottom: 0px">
+            <button type="button" class="close">×</button>
+            <strong>Bad Search! </strong> {{searchErrorMessage}}
+        </div>
+    </div>
+
+    <!--all orders-->
+    <div class="container">
+        <table class="table table-striped orders-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Book Name</th>
+                    <th>Costumer Id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="order in orders">
+                    <td>{{order.date | date : "dd/MM/yyyy" }}</td>
+                    <td>{{order.bookName}}</td>
+                    <td>{{order.customerId}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

@@ -87,6 +87,13 @@
     max-width: 900px !important;
 }
 
+.search-input-orders
+{
+    max-width: 800px !important;
+    width: 700px !important;
+    margin-left: 14px;
+}
+
 .price-input{
     width: 50px;
     margin-left: 5px;

@@ -20,7 +20,7 @@ exports.initDatabase = function (){
 			books.forEach(function(book){
 				for(var i = 0; i < bookNumber; i++){
 					var orderDate = "2015-" + bookNumber + "-1";
-					var order = {"bookId" : book._id, "customerId" : 1, "date" : orderDate};
+					var order = {"bookId" : book._id, "customerId" : bookNumber, "date" : orderDate};
 					ordersCollection.insert(order, {w:1}, function(err,docs) {
 						if (err) throw err;
 					});
