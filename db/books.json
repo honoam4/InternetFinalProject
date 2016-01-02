@@ -9,9 +9,9 @@
 		"publishYear" : 2003,
 		"rating" : 3,
 		"reviews" : [
-			{"text": "This is amazing!", "writer": "Noam the cutest", "date" : "2014-1-1", "rating" : 3},
-			{"text": "Great book :) I like it", "writer": "Gal the cutest", "date" : "2015-1-1", "rating" : 4},
-			{"text": "AMAZZZINNGGGGG!!!!!!", "writer": "Nothing", "date" : "2014-1-1", "rating" : 2}],
+			{"text": "Best book ever written...", "writer": "USA Today", "date" : "2000-11-1", "rating" : 3},
+			{"text": "Wow!", "writer": "The Boston Globe", "date" : "2005-2-22", "rating" : 4},
+			{"text": "Great book!", "writer": "Houston Chronicle", "date" : "2014-4-1", "rating" : 2}],
 		"synopsis" : "Harry Potter and the Order of the Phoenix is the fifth novel in the Harry Potter series, written by J. K. Rowling. It follows Harry Potter's struggles through his fifth year at Hogwarts School of Witchcraft and Wizardry, including the surreptitious return of the antagonist Lord Voldemort, O.W.L. exams, and an obstructive Ministry of Magic. The novel was published on 21 June 2003 by Bloomsbury in the United Kingdom, Scholastic in the United States, and Raincoast in Canada. Five million copies were sold in the first 24 hours of publication.[2] It is the longest book of the series."
 	},
 	{
@@ -25,8 +25,8 @@
 		"publishYear" : 1998,
 		"rating" : 3,
 		"reviews" : [
-			{"text": "This is amazing!", "writer": "Noam the cutest", "date" : "2014-1-1", "rating" : 3},
-			{"text": "Great book :) I like it", "writer": "Gal the cutest", "date" : "2015-1-1", "rating" : 4}],
+			{"text": "Great book!", "writer": "USA Today", "date" : "2012-1-4", "rating" : 3},
+			{"text": "Wow!", "writer": "The Arizona Republic", "date" : "2010-12-1", "rating" : 4}],
 		"synopsis" : "Harry Potter and the Chamber of Secrets is the second novel in the Harry Potter series, written by J. K. Rowling. The plot follows Harry's second year at Hogwarts School of Witchcraft and Wizardry, during which a series of messages on the walls of the school's corridors warn that the Chamber of Secrets has been opened and that the heir of Slytherin would kill all pupils who do not come from all-magical families. These threats are found after attacks which leave residents of the school petrified (frozen like stone). Throughout the year, Harry and his friends Ron Weasley and Hermione Granger investigate the attacks."
 	},
 	{
@@ -38,11 +38,11 @@
 		"genre" : ["Fantasy"],
 		"publisher" : "Bloomsbury",
 		"publishYear" : 2007,
-		"rating" : 4,
+		"rating" : 3,
 		"reviews" : [
-			{"text": "This is amazing!", "writer": "Noam the cutest", "date" : "2014-1-1", "rating" : 3},
-			{"text": "Great book :) I like it", "writer": "Gal the cutest", "date" : "2015-1-1", "rating" : 4},
-			{"text": "AMAZZZINNGGGGG!!!!!!", "writer": "Nothing", "date" : "2014-1-1", "rating" : 2}],
+			{"text": "Great book", "writer": "The Arizona Republic", "date" : "2014-1-1", "rating" : 3},
+			{"text": "Best book ever written...", "writer": "The Boston Globe", "date" : "2015-1-1", "rating" : 4},
+			{"text": "This is amazing!", "writer": "USA Today", "date" : "2014-1-1", "rating" : 2}],
 		"synopsis" : "Harry Potter and the Deathly Hallows is the seventh and final novel of the Harry Potter series, written by British author J. K. Rowling. The book was released on 21 July 2007 by Bloomsbury Publishing in the United Kingdom, in the United States by Scholastic, and in Canada by Raincoast Books, ending the series that began in 1997 with the publication of Harry Potter and the Philosopher's Stone. The novel chronicles the events directly following Harry Potter and the Half-Blood Prince (2005), and the final confrontation between the wizards Harry Potter and Lord Voldemort."
 	},
 	{
@@ -56,9 +56,8 @@
 	"publishYear" : 1995,
 	"rating" : 5,
 	"reviews" : [
-		{"text": "This is amazing!", "writer": "Noam the cutest", "date" : "2014-1-1", "rating" : 3},
-		{"text": "Great book :) I like it", "writer": "Gal the cutest", "date" : "2015-1-1", "rating" : 4},
-		{"text": "AMAZZZINNGGGGG!!!!!!", "writer": "Nothing", "date" : "2014-1-1", "rating" : 2}],
+		{"text": "This is amazing!", "writer": "The New York Times", "date" : "2014-1-1", "rating" : 5},
+		{"text": "Liberty, equality, fraternity, or death; -- the last, much the easiest to bestow, O Guillotine!", "writer": "The Star-Ledger", "date" : "2015-1-1", "rating" : 5}],
 	"synopsis" : "Investigator and sports agent Myron Bolitar is poised on the edge of the big-time. So is Christian Steele, a rookie quarterback and Myron's prized client. But when Christian gets a phone call from a former girlfriend, a woman whom everyone, including the police, believes is dead, the deal starts to go sour. Suddenly Myron is plunged into a baffling mystery of sex and blackmail. Trying to unravel the truth about a family's tragedy, a woman's secret and a man's lies, Myron is up against the dark side of his business—where image and talent make you rich, but the truth can get you killed."
 	},
 	{
@@ -70,13 +69,119 @@
 		"genre" : ["Fantasy"],
 		"publisher" : "Dell",
 		"publishYear" : 2008,
+		"rating" : 3,
+		"reviews" : [
+			{"text": "To see what your friends thought of this book", "writer": "The Star-Ledger", "date" : "2014-1-1", "rating" : 3},
+			{"text": "Great book!", "writer": "Houston Chronicle", "date" : "2015-1-1", "rating" : 4},
+			{"text": "Disappointing...", "writer": "USA Today", "date" : "2014-1-1", "rating" : 2}],
+		"synopsis" : "The Hunger Games is a 2008 science fiction novel by the American writer Suzanne Collins. It is written in the voice of 16-year-old Katniss Everdeen, who lives in the dystopian, post-apocalyptic nation of Panem in North America. The Capitol, a highly advanced metropolis, exercises political control over the rest of the nation. The Hunger Games is an annual event in which one boy and one girl aged 12–18 from each of the twelve districts surrounding the Capitol are selected by lottery to compete in a televised battle to the death."
+	},
+	{
+		"name" : "Hamlet",
+		"author" : "William Shakespeare",
+		"picture" : "Hamlet.jpg",
+		"bigPic" : "Hamlet-big.jpg",
+		"price" : 11.21,
+		"genre" : ["Novel"],
+		"publisher" : "Dell",
+		"publishYear" : 1990,
 		"rating" : 5,
 		"reviews" : [
-			{"text": "This is amazing!", "writer": "Noam the cutest", "date" : "2014-1-1", "rating" : 3},
-			{"text": "Great book :) I like it", "writer": "Gal the cutest", "date" : "2015-1-1", "rating" : 4},
-			{"text": "AMAZZZINNGGGGG!!!!!!", "writer": "Nothing", "date" : "2014-1-1", "rating" : 2}],
-		"synopsis" : "The Hunger Games is a 2008 science fiction novel by the American writer Suzanne Collins. It is written in the voice of 16-year-old Katniss Everdeen, who lives in the dystopian, post-apocalyptic nation of Panem in North America. The Capitol, a highly advanced metropolis, exercises political control over the rest of the nation. The Hunger Games is an annual event in which one boy and one girl aged 12–18 from each of the twelve districts surrounding the Capitol are selected by lottery to compete in a televised battle to the death."
+			{"text": "Wow!", "writer": "New York Times", "date" : "2015-1-1", "rating" : 5},
+			{"text": "Best book ever written...", "writer": "USA Today", "date" : "2015-8-1", "rating" : 5}],
+		"synopsis" : "The Tragedy of Hamlet, Prince of Denmark, or more simply Hamlet, is a tragedy by William Shakespeare, believed to have been written between 1599 and 1601. The play, set in Denmark, recounts how Prince Hamlet exacts revenge on his uncle Claudius, who has murdered Hamlet's father, the King, and then taken the throne and married Gertrude, Hamlet's mother. The play vividly charts the course of real and feigned madness—from overwhelming grief to seething rage—and explores themes of treachery, revenge, incest, and moral corruption."
+	},
+	{
+		"name" : "Lolita",
+		"author" : "Vladimir Nabokov",
+		"picture" : "Lolita.jpg",
+		"bigPic" : "Lolita-big.jpg",
+		"price" : 8.55,
+		"genre" : ["Novel"],
+		"publisher" : "Bloomsbury",
+		"publishYear" : 1989,
+		"rating" : 4,
+		"reviews" : [
+			{"text": "Wow!", "writer": "New York Times", "date" : "2005-1-12", "rating" : 4},
+			{"text": "Best book ever written...", "writer": "USA Today", "date" : "2001-8-2", "rating" : 4}],
+		"synopsis" : "Awe and exhiliration--along with heartbreak and mordant wit--abound in Lolita, Nabokov's most famous and controversial novel, which tells the story of the aging Humbert Humbert's obsessive, devouring, and doomed passion for the nymphet Dolores Haze. Lolita is also the story of a hypercivilized European colliding with the cheerful barbarism of postwar America. Most of all, it is a meditation on love--love as outrage and hallucination, madness and transformation."
+	},
+	{
+		"name" : "A Game of Thrones",
+		"author" : "George R. R. Martin",
+		"picture" : "AGameOfThrones.jpg",
+		"bigPic" : "AGameOfThrones-big.jpg",
+		"price" : 12.55,
+		"genre" : ["Fantasy, Suspense"],
+		"publisher" : "Dell",
+		"publishYear" : 2011,
+		"rating" : 5,
+		"reviews" : [
+			{"text": "Wow!", "writer": "New York Times", "date" : "2012-1-10", "rating" : 5},
+			{"text": "Best book ever written...", "writer": "USA Today", "date" : "2011-10-2", "rating" : 5},
+			{"text": "Liberty, equality, fraternity, or death; -- the last, much the easiest to bestow, O Guillotine!", "writer": "The Star-Ledger", "date" : "2015-1-1", "rating" : 5}],
+		"synopsis" : "From a master of contemporary fantasy comes the first novel of a landmark series unlike any you’ve ever read before. With A Game of Thrones, George R. R. Martin has launched a genuine masterpiece, bringing together the best the genre has to offer. Mystery, intrigue, romance, and adventure fill the pages of this magnificent saga, the first volume in an epic series sure to delight fantasy fans everywhere."
+	},
+	{
+		"name" : "Fifty Shades of Grey",
+		"author" : "E. L. James",
+		"picture" : "50ShadesOfGrey.jpg",
+		"bigPic" : "50ShadesOfGrey-big.jpg",
+		"price" : 10.55,
+		"genre" : ["Fantasy, Novel"],
+		"publisher" : "Dell",
+		"publishYear" : 2011,
+		"rating" : 4,
+		"reviews" : [
+			{"text": "This is amazing!", "writer": "New York Times", "date" : "2005-1-12", "rating" : 4},
+			{"text": "In Love With This Book...", "writer": "Houston Chronicle", "date" : "2001-8-2", "rating" : 4}],
+		"synopsis" : "Fifty Shades of Grey is a S&M erotica novel written by British author E.L. James. It is the first installment in the Fifty Shades of Grey trilogy that traces the deepening relationship between college graduate, Anastasia Steele, and business magnate, Christian Grey. It is notable for its explicitly erotic scenes featuring elements of sexual practices involving bondage/discipline, dominance/submission, and sadism/masochism."
+	},
+	{
+		"name" : "The Lord of the Rings",
+		"author" : "J.R.R. Tolkien",
+		"picture" : "TheLordOfTheRings.jpg",
+		"bigPic" : "TheLordOfTheRings-big.jpg",
+		"price" : 9.70,
+		"genre" : ["Fantasy, Thriller"],
+		"publisher" : "Paperback",
+		"publishYear" : 2005,
+		"rating" : 3,
+		"reviews" : [
+			{"text": "Wow!", "writer": "New York Times", "date" : "2005-7-12", "rating" : 4},
+			{"text": "Nice book!", "writer": "Houston Chronicle", "date" : "2007-8-10", "rating" : 3},
+			{"text": "Disappointing...", "writer": "Daily News", "date" : "2014-1-12", "rating" : 2}],
+		"synopsis" : "One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them. In ancient times the Rings of Power were crafted by the Elven-smiths, and Sauron, the Dark Lord, forged the One Ring, filling it with his own power so that he could rule all others. But the One Ring was taken from him, and though he sought it throughout Middle-earth, it remained lost to him. After many ages it fell by chance into the hands of the hobbit Bilbo Baggins."
+	},
+	{
+		"name" : "The Girl with the Dragon Tattoo",
+		"author" : "Stieg Larsson",
+		"picture" : "TheGirlWithTheDragonTattoo.jpg",
+		"bigPic" : "TheGirlWithTheDragonTattoo-big.jpg",
+		"price" : 11.60,
+		"genre" : ["Novel"],
+		"publisher" : "Paperback",
+		"publishYear" : 2011,
+		"rating" : 5,
+		"reviews" : [
+			{"text": "Wow!", "writer": "New York Times", "date" : "2013-7-12", "rating" : 5},
+			{"text": "Best book ever written...", "writer": "Houston Chronicle", "date" : "2014-8-8", "rating" : 5}],
+		"synopsis" : "Murder mystery, family saga, love story, and financial intrigue combine into one satisfyingly complex and entertainingly atmospheric novel. Harriet Vanger, a scion of one of Sweden's wealthiest families disappeared over forty years ago. All these years later, her aged uncle continues to seek the truth. He hires Mikael Blomkvist, a crusading journalist recently trapped by a libel conviction, to investigate. He is aided by the pierced and tattooed punk prodigy Lisbeth Salander. Together they tap into a vein of unfathomable iniquity and astonishing corruption."
+	},
+	{
+		"name" : "The Alchemist",
+		"author" : "Paulo Coelho",
+		"picture" : "TheAlchemist.jpg",
+		"bigPic" : "TheAlchemist-big.jpg",
+		"price" : 7.11,
+		"genre" : ["Novel"],
+		"publisher" : "Bloomsbury",
+		"publishYear" : 2006,
+		"rating" : 4,
+		"reviews" : [
+			{"text": "Best book ever written...", "writer": "USA Today", "date" : "2000-11-1", "rating" : 5},
+			{"text": "Wow!", "writer": "The Boston Globe", "date" : "2005-2-22", "rating" : 3},
+			{"text": "Great book!", "writer": "Houston Chronicle", "date" : "2014-4-1", "rating" : 4}],
+		"synopsis" : "The Alchemist by Paulo Coelho continues to change the lives of its readers forever. With more than two million copies sold around the world, The Alchemist has established itself as a modern classic, universally admired. Paulo Coelho's masterpiece tells the magical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure as extravagant as any ever found. The story of the treasures Santiago finds along the way teaches us, as only a few stories can, about the essential wisdom of listening to our hearts, learning to read the omens strewn along life's path, and, above all, following our dreams."
 	}
-
-
 ]

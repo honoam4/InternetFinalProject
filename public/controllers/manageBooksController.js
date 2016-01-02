@@ -1,6 +1,6 @@
 angular.module('BookStoreApp').controller('manageBooksController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
 
-    $scope.allGenres = ["Fiction", "Thriller", "Suspense", "Fantasy"];
+    $scope.allGenres = ["Fiction", "Thriller", "Suspense", "Fantasy", "Novel"];
 
     $('.alert .close').on('click', function(e) {
         $(this).parent().hide();

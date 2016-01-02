@@ -1,7 +1,7 @@
 angular.module('BookStoreApp').controller('homeController', ['$scope', '$http', function($scope, $http) {
 
     angular.element(document.querySelector('#searchMaxPrice')).attr('value', '100');
-    $scope.allGenres = ["Fiction", "Thriller", "Suspense", "Fantasy"];
+    $scope.allGenres = ["Fiction", "Thriller", "Suspense", "Fantasy", "Novel"];
     $scope.searchErrorMessage = "";
 
     $('.alert .close').on('click', function(e) {
