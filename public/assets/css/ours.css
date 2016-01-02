@@ -16,6 +16,9 @@
     align-text: right;
     height: 38px;
     margin-right: 5px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
 }
 
 .book-card-reviews{
@@ -49,6 +52,7 @@
 }
 
 .footer-text{
+    font-family: myFirstFont;
     color: darkgrey;
     margin-right: 10px;
     margin-left: 10px;
@@ -70,7 +74,8 @@
 
 .quote-text{
     font-family: Old English Text MT;
-    margin: 0px
+    margin: 0px;
+    text-shadow: 2px 2px #D0D0D0;
 }
 
 .dropdown-menu > li > input{
@@ -109,6 +114,11 @@
     text-align: center;
 }
 
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/SansationBold.woff);
+}
 
 .panel-heading a:after {
     font-family:'Glyphicons Halflings';
@@ -181,3 +191,55 @@ input[readonly] {
 .orders-table{
     font-size: 20px;
 }
+/*D3*/
+
+path.slice{
+    stroke-width:2px;
+}
+polyline{
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+svg text.percent{
+    fill:white;
+    text-anchor:middle;
+    font-size:12px;
+}
+
+.donut-color-canvas{
+    border:1px solid #000000;
+    height: 15px;
+    width: 15px;
+}
+
+
+/*ddumm*/
+.axis path, .axis line
+{
+    fill: none;
+    stroke: #777;
+    shape-rendering: crispEdges;
+}
+
+.axis text
+{
+    font-family: 'Arial';
+    font-size: 13px;
+}
+.tick
+{
+    stroke-dasharray: 1, 2;
+}
+.bar
+{
+    fill: FireBrick;
+}
+
+.chart-column{
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+
