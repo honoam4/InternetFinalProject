@@ -20,6 +20,26 @@ exports.getById = function(req, res) {
     });
 };
 
+exports.names = function(req, res) {
+
+    var ids = req.params.ids.split(',');
+
+    Book.find({
+        "_id": { $in: ids}
+    }, function(err, books) {
+        if (err) {
+            return res.status(500).end();
+        }
+
+        var result = [];
+        books.forEach(function (book) {
+            result.push({"id" : book._id, "name" : book.name});
+        });
+
+        res.json(result);
+    });
+};
+
 exports.search = function(req, res) {
     // Search Text
     var searchText = '';
