@@ -243,3 +243,24 @@ svg text.percent{
     column-count: 3;
 }
 
+@-webkit-keyframes thumb {
+    0% { -webkit-transform: scale(1); }
+    50% { -webkit-transform: scale(0.9); }
+    100% { -webkit-transform: scale(1); }
+}
+
+.book-card-animation div:hover
+{
+    -webkit-animation-name: thumb;
+    -webkit-animation-duration: 450ms;
+    -webkit-transform-origin:50%;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+}
+
+.bld{
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+}
+
