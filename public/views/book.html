@@ -7,8 +7,11 @@
             <h4 class="pull-right">{{book.price}}$</h4>
             <h4 style="color: #449d44">{{book.name}}</h4>
         </div>
+        <p style="font-style: italic">{{book.author}}, {{book.publishYear}}</p>
         <aside>{{book.synopsis}}</aside>
+        </br>
         <div class="ratings">
+
             <p class="pull-right">{{book.reviews.length}} reviews</p>
             <p>
                 <span class="glyphicon glyphicon-star" ng-repeat="i in getRating(book.rating) track by $index"></span>
