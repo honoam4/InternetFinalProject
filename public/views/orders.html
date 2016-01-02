@@ -6,13 +6,13 @@
             <tr>
                 <th>Date</th>
                 <th>Book Name</th>
-                <th>Costumer</th>
+                <th>Costumer Id</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="order in orders">
-                <td>{{order.date}}</td>
-                <td>{{order.bookId}}</td>
+                <td>{{order.date | date : "dd/MM/yyyy" }}</td>
+                <td>{{order.bookName}}</td>
                 <td>{{order.customerId}}</td>
             </tr>
         </tbody>
