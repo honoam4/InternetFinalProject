@@ -68,7 +68,7 @@
                 <div class="form-group" style="margin-left: 15px">
                     <label for="{{book._id}}-Synopsis">Synopsis</label>
                     <textarea rows="5" type="text" class="form-control edit-book-sys" id="{{book._id}}-synopsis" placeholder="synopsis...">{{book.synopsis}}</textarea>
-                    <button type="submit" class="btn btn-danger pull-right edit-book-button">
+                    <button ng-click="deleteBook(book)" type="button" class="btn btn-danger pull-right edit-book-button">
                         <span class="glyphicon glyphicon-trash"></span>Delete
                     </button>
                     <button ng-click="saveBook(book)" type="button" class="btn btn-success pull-right edit-book-button">
@@ -154,7 +154,30 @@
                     </form>
                 </div>
                 <div class="form-group" style="margin-left: 15px">
-                    <label for="new-Synopsis">Synopsis</label>
+                    <!--Picture-->
+                    <label style="margin-top: 15px" for="new-picture">Picture (200 x 308)</label>
+                    <div class="input-group pull-left">
+                        <span class="input-group-btn">
+                            <span class="btn btn-primary btn-file pull-left">
+                                Browse<input type="file" multiple>
+                            </span>
+                        </span>
+                        <input id="new-picture" type="text" class="form-control" style="max-width: 908px" readonly>
+                    </div>
+                    <br>
+                    <!--Big Picture-->
+                    <label style="margin-top: 15px" for="new-big-picture">Big Picture (280 x 1160)</label>
+                    <div class="input-group pull-left">
+                        <span class="input-group-btn">
+                            <span class="btn btn-primary btn-file pull-left">
+                                Browse<input type="file" multiple>
+                            </span>
+                        </span>
+                        <input id="new-big-picture" type="text" class="form-control" style="max-width: 908px" readonly>
+                    </div>
+                    <!--Synopsis-->
+                    <br>
+                    <label style="margin-top: 10px" for="new-Synopsis">Synopsis</label>
                     <textarea rows="5" type="text" class="form-control edit-book-sys" id="new-synopsis" placeholder="synopsis..."></textarea>
                     <button type="submit" class="btn btn-danger pull-right edit-book-button">
                         <span class="glyphicon glyphicon-trash"></span>Delete
@@ -164,11 +187,11 @@
                     </button>
                 </div>
                 <div style="margin-top: 60px">
-                    <div class="alert alert-success fade in" id="success-save-message" style="display:none;">
+                    <div class="alert alert-success fade in" id="new-success-save-message" style="display:none;">
                         <button type="button" class="close">×</button>
                         <strong>Congratulations!! </strong> The book was udated seccessfuly
                     </div>
-                    <div class="alert alert-danger fade in" id="error-save-message" style="display:none;">
+                    <div class="alert alert-danger fade in" id="new-error-save-message" style="display:none;">
                         <button type="button" class="close">×</button>
                         <strong>Error save the book. </strong> Please try again later.
                     </div>

@@ -9,5 +9,6 @@ router.get('/search/:name/:maxprice/:genre', controller.search);
 router.get('/search/:maxprice/:genre', controller.search);
 router.post('/updateBook/', controller.save);
 router.post('/addBook/', controller.save);
+router.post('/deleteBook/', controller.delete);
 
 module.exports = router;
