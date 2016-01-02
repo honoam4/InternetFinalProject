@@ -11,5 +11,25 @@ exports.initDatabase = function (){
 		booksCollection.insert(books, {w:1}, function(err,docs) {
 			if (err) throw err;
 		});
+
+		// Get all the books and create orders
+		var bookNumber = 1;
+		var ordersCollection = myDb.collection('orders');
+
+		booksCollection.find(function(err, books){
+			books.forEach(function(book){
+				for(var i = 0; i < bookNumber; i++){
+					var orderDate = "2015-" + bookNumber + "-1";
+					var order = {"bookId" : book._id, "customerId" : 1, "date" : orderDate};
+					ordersCollection.insert(order, {w:1}, function(err,docs) {
+						if (err) throw err;
+					});
+				}
+
+				bookNumber++;
+			})
+		});
+
+
 	});
 };
