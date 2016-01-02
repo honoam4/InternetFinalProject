@@ -1,0 +1,22 @@
+<div class=" text-center">
+    <div class="col-md-2">
+    </div>
+
+    <!--Content-->
+    <div id="content" class="col-md-8" style="margin-bottom: 70px">
+        <div class="well" style="height: 400px">
+            <div class="col-md-5 ">
+                <h3 class="pull-left" style="margin-bottom: 35px"><strong>Books By Order</strong></h3>
+                <h5 class="pull-left" ng-repeat="book in statisticsPieData">
+                    <canvas class="donut-color-canvas" style="background-color: {{book.color}}"></canvas>
+                    <span style="margin-left: 4px">{{bookName(book.bookId)}} : <strong>{{book.value}} orders</strong></span>
+                </h5>
+            </div>
+            <div class="col-md-5">
+                <quotesDonutDiv></quotesDonutDiv>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+    </div>
+</div>

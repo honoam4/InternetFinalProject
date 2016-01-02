@@ -10,14 +10,14 @@ angular.module('BookStoreApp').controller('homeController', ['$scope', '$http', 
 
 
     var allBooks = function() {
-                $http.get('api/books/')
-                    .then(function(response) {
-                        $scope.allBooks = response.data;
-                    })
-                    .catch(function(err) {
-                        console.error('Repos error', err);
-                    });
-        };
+        $http.get('api/books/')
+            .then(function(response) {
+                $scope.allBooks = response.data;
+            })
+            .catch(function(err) {
+                console.error('Repos error', err);
+            });
+    };
 
     $scope.search = function() {
         // Check what are the selected genres

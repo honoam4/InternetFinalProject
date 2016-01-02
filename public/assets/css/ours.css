@@ -175,3 +175,25 @@ input[readonly] {
 .orders-table{
     font-size: 20px;
 }
+/*D3*/
+
+path.slice{
+    stroke-width:2px;
+}
+polyline{
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+svg text.percent{
+    fill:white;
+    text-anchor:middle;
+    font-size:12px;
+}
+
+.donut-color-canvas{
+    border:1px solid #000000;
+    height: 15px;
+    width: 15px;
+}
