@@ -28,6 +28,14 @@ BookStoreApp.config(function($routeProvider) {
             .when('/chat', {
                 templateUrl : 'views/chat.html',
                 controller  : 'chatController'
+            })
+            .when('/orders', {
+                templateUrl : 'views/orders.html',
+                controller  : 'ordersController'
+            })
+            .when('/statistics', {
+                templateUrl : 'views/statistics.html',
+                controller  : 'statisticsController'
             });
 });
 

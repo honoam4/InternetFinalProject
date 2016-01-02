@@ -77,11 +77,11 @@
             <div class="col-sm-3 col-lg-3 col-md-3" ng-repeat="book in allBooks">
                 <div class="thumbnail book-card">
                     <img src="./../resources/{{book.picture}}" alt="">
-                    <div class="caption book-card-description">
+                    <section class="caption book-card-description">
                         <h4 class="pull-right">{{book.price}}$</h4>
                         <h4 class="book-card-title"><a href="#/book/{{book._id}}">{{book.name}}</a></h4>
                         <h4>{{book.genre}}</h4>
-                    </div>
+                    </section>
 
                     <div class="ratings">
                         <label class="pull-right book-card-reviews">{{book.reviews.length}} reviews</label>
