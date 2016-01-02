@@ -9,6 +9,7 @@ angular.module('BookStoreApp').controller('chatController',['$scope', '$log', 'c
     $scope.sendMessage = function() {
         var match = $scope.message.match('^\/nick (.*)');
 
+        // Replacing nick name
         if (angular.isDefined(match) &&
             angular.isArray(match) && match.length === 2) {
             var oldNick = nickName;
@@ -17,13 +18,23 @@ angular.module('BookStoreApp').controller('chatController',['$scope', '$log', 'c
             $scope.messageLog = messageFormatter(new Date(),
                     nickName, 'nickname changed - from ' +
                     oldNick + ' to ' + nickName + '!') +
-                $scope.messageLog;
+                    $scope.messageLog;
             $scope.nickName = nickName;
         }
 
+        // Sending the message to the server
         $log.debug('sending message', $scope.message);
         chatSocket.emit('message', nickName, $scope.message);
+        $scope.messageLog = messageFormatter(new Date(),
+                nickName, $scope.message) +
+                $scope.messageLog;
         $log.debug('message sent', $scope.message);
         $scope.message = '';
     }
+
+    // Receive message from the server
+    chatSocket.on('message', function(msg){
+        $scope.messageLog = 'Your message has been sent!\n\n'
+                            + $scope.messageLog;
+    });
 }]);

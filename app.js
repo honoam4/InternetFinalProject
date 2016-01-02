@@ -1,14 +1,18 @@
 var myDb = require('./db/db.js');
 myDb.initDatabase();
 
+
 var express = require('express');
 var http = require('http');
 var path = require('path');
 var consolidate = require('consolidate');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var io = require('socket.io');
 
+// Connect to DB
 mongoose.connect('mongodb://localhost:27017/booksStore');
+
 // Init the models
 var app = express();
 
@@ -31,9 +35,13 @@ require('./routes')(app);
 // Start the server
 var port = 3000;
 
-http.createServer(app).listen(port, function() {
+var server = http.createServer(app).listen(port, function() {
     console.log("Express server listening on port %s", port);
 });
+
+// io
+io = io.listen(server);
+require('./server/sockets/base')(io);
 
 module.exports = app;
 

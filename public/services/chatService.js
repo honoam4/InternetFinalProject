@@ -8,5 +8,5 @@ angular.module('chatService', [])
     .value('messageFormatter', function(date, nick, message) {
         return date.toLocaleTimeString() + ' - ' +
             nick + ' - ' +
-            message + '\n';
+            message + '\n\n';
     });
