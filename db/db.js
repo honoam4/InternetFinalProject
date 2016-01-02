@@ -19,8 +19,9 @@ exports.initDatabase = function (){
 		booksCollection.find(function(err, books){
 			books.forEach(function(book){
 				for(var i = 0; i < bookNumber; i++){
-					var orderDate = "2015-" + bookNumber + "-1";
-					var order = {"bookId" : book._id, "customerId" : bookNumber, "date" : orderDate};
+					var orderDateString = "2015-" + bookNumber + "-1";
+					var orderDate = new Date(orderDateString);
+					var order = {"bookId" : book._id, "customerId" : bookNumber.toString(), "date" : orderDate};
 					ordersCollection.insert(order, {w:1}, function(err,docs) {
 						if (err) throw err;
 					});

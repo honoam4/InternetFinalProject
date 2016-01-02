@@ -37,3 +37,28 @@ exports.save = function (req,res) {
     });
 };
 
+exports.search = function(req, res) {
+    // Book name Text
+    var searchText = '';
+    if (req.params.bookName){searchText = req.params.bookName};
+
+    // Customers
+    var customers = req.params.customers.split(',');
+    var chosenCustomers = JSON.parse(JSON.stringify(customers));
+
+    // Dates
+    var minDate = new Date(req.params.minDate);
+    var maxDate = new Date(req.params.maxDate);
+
+    Order.find({
+        "date": { $lte: maxDate, $gte: minDate },
+        "customerId": { $in: chosenCustomers }
+        },
+        function(err, orders) {
+        if (err) {
+            return res.status(500).end();
+        }
+        res.json(orders);
+    });
+};
+
